@@ -10,3 +10,19 @@ const fetchData = (apiEndPoint) => {
 };
 
 fetchData(jsonTypicode);
+
+
+async function asyncFuncApi() {
+  try {
+      const result = await fetch(jsonTypicode); 
+      const data = await result.json();
+      console.log(data);
+  }   catch(error) {
+      console.log(error);
+  }
+};
+
+asyncFuncApi(jsonTypicode); 
+
+
+
